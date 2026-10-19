@@ -1,0 +1,393 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Radiance — Awakening Brighter Lives. Discover hope, wisdom, courage and the potential for transformation inspired by the Lotus Sutra.">
+  <meta name="theme-color" content="#102c40">
+  <title>Radiance | Awakening Brighter Lives</title>
+  <style>
+    :root {
+      --navy: #102c40;
+      --deep: #091b2a;
+      --gold: #d6a94f;
+      --ivory: #fff9ec;
+      --sage: #638c79;
+      --muted: #bfd0da;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: var(--ivory);
+      color: var(--navy);
+      line-height: 1.7;
+    }
+    a { color: inherit; }
+    .header {
+      background: var(--deep);
+      color: white;
+      padding: 16px 6%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+      border-bottom: 1px solid #ffffff20;
+    }
+    .brand {
+      font-size: 23px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      color: var(--gold);
+      text-decoration: none;
+    }
+    nav { display: flex; gap: 22px; flex-wrap: wrap; }
+    nav a {
+      text-decoration: none;
+      font-size: 14px;
+      color: #e3eaf0;
+    }
+    nav a:hover, nav a:focus-visible {
+      color: var(--gold);
+    }
+    .hero {
+      min-height: 630px;
+      padding: 100px 22px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      background:
+        radial-gradient(ellipse at 50% 25%,
+          #a77c3140 0%, transparent 46%),
+        linear-gradient(145deg, #153d53, #091b2a 80%);
+    }
+    .lotus {
+      width: 140px;
+      height: 115px;
+      margin-bottom: 24px;
+      color: var(--gold);
+      filter: drop-shadow(0 0 20px #d6a94f65);
+    }
+    .eyebrow {
+      color: var(--gold);
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      font-size: 13px;
+    }
+    h1 {
+      font-family: Georgia, serif;
+      font-weight: normal;
+      font-size: clamp(56px, 10vw, 105px);
+      letter-spacing: 8px;
+      line-height: 1.1;
+      margin: 18px 0;
+    }
+    .tagline {
+      color: var(--gold);
+      font-family: Georgia, serif;
+      font-size: clamp(22px, 4vw, 32px);
+      margin: 0 0 25px;
+    }
+    .hero-text {
+      max-width: 680px;
+      font-size: 18px;
+      color: #d8e3e8;
+      margin-bottom: 30px;
+    }
+    .button {
+      display: inline-block;
+      background: var(--gold);
+      color: var(--deep);
+      text-decoration: none;
+      padding: 13px 28px;
+      border-radius: 30px;
+      font-weight: 700;
+      transition: background .2s, transform .2s;
+    }
+    .button:hover {
+      background: #f1cd7e;
+      transform: translateY(-2px);
+    }
+    section { padding: 85px 8%; scroll-margin-top: 20px; }
+    .container { max-width: 1080px; margin: auto; }
+    .section-label {
+      color: var(--sage);
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-size: 12px;
+      font-weight: bold;
+    }
+    h2 {
+      font-family: Georgia, serif;
+      font-size: clamp(30px, 5vw, 43px);
+      line-height: 1.3;
+      margin: 10px 0 22px;
+      font-weight: normal;
+    }
+    .intro { text-align: center; }
+    .intro p { max-width: 760px; margin: 0 auto 18px; }
+    .cream { background: #f3eddf; }
+    .dark {
+      background: var(--navy);
+      color: white;
+    }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 24px;
+      margin-top: 35px;
+    }
+    .card {
+      background: white;
+      color: var(--navy);
+      padding: 32px 26px;
+      border-radius: 13px;
+      border-top: 4px solid var(--gold);
+      box-shadow: 0 8px 24px #0000000b;
+    }
+    .card h3 {
+      font-family: Georgia, serif;
+      font-size: 24px;
+      margin: 0 0 12px;
+    }
+    .card p { margin: 0; color: #455a67; }
+    .dark .card { background: #18394e; color: white; }
+    .dark .card p { color: #d0dee5; }
+    .quote {
+      max-width: 770px;
+      margin: 32px auto 0;
+      padding: 28px;
+      border-left: 3px solid var(--gold);
+      font-family: Georgia, serif;
+      font-size: 23px;
+      font-style: italic;
+      color: var(--gold);
+      text-align: left;
+    }
+    .center { text-align: center; }
+    .closing {
+      text-align: center;
+      background: linear-gradient(150deg, var(--navy), var(--deep));
+      color: white;
+    }
+    .closing p { color: #d7e2e9; }
+    footer {
+      background: #071521;
+      color: #bfced5;
+      padding: 32px 18px;
+      text-align: center;
+      font-size: 13px;
+    }
+    footer strong { color: var(--gold); }
+    :focus-visible {
+      outline: 3px solid var(--gold);
+      outline-offset: 4px;
+    }
+    @media (max-width: 760px) {
+      .header { justify-content: center; text-align: center; }
+      nav { justify-content: center; gap: 12px 18px; }
+      h1 { letter-spacing: 3px; }
+      .hero { min-height: 560px; padding: 75px 20px; }
+      .cards { grid-template-columns: 1fr; }
+      section { padding: 65px 6%; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .button { transition: none; }
+    }
+  </style>
+</head>
+<body>
+
+<header class="header">
+  <a class="brand" href="#home">RADIANCE</a>
+  <nav aria-label="Main navigation">
+    <a href="#about">About</a>
+    <a href="#meaning">Our Meaning</a>
+    <a href="#philosophy">Philosophy</a>
+    <a href="#inspiration">Inspiration</a>
+    <a href="#community">Community</a>
+  </nav>
+</header>
+
+<main>
+  <section class="hero" id="home">
+    <svg class="lotus" viewBox="0 0 180 140"
+         fill="none" stroke="currentColor"
+         stroke-width="2.5" aria-hidden="true">
+      <path d="M90 111 C50 87 62 40 90 14
+               C118 40 130 87 90 111Z"/>
+      <path d="M88 113 C48 116 24 88 22 44
+               C59 49 77 76 88 113Z"/>
+      <path d="M92 113 C132 116 156 88 158 44
+               C121 49 103 76 92 113Z"/>
+      <path d="M72 114 C36 127 14 104 4 78
+               C35 73 55 90 72 114Z"/>
+      <path d="M108 114 C144 127 166 104 176 78
+               C145 73 125 90 108 114Z"/>
+      <path d="M30 126 Q90 140 150 126"/>
+      <path d="M53 133 Q90 144 127 133"/>
+    </svg>
+
+    <div class="eyebrow">A journey of hope and wisdom</div>
+    <h1>RADIANCE</h1>
+    <p class="tagline">Awakening Brighter Lives</p>
+    <p class="hero-text">
+      Discover the courage to illuminate your life,
+      awaken your limitless potential, and share
+      hope with the world.
+    </p>
+    <a href="#about" class="button">Discover Radiance</a>
+  </section>
+
+  <section class="intro" id="about">
+    <div class="container">
+      <div class="section-label">Welcome</div>
+      <h2>Awaken the Light Within</h2>
+      <p>
+        Every life holds the possibility of wisdom,
+        courage, compassion, and meaningful change.
+      </p>
+      <p>
+        Radiance is a space for reflection, encouragement,
+        and personal growth, inspired by the humanistic
+        spirit of the Lotus Sutra and Nichiren Buddhism.
+      </p>
+      <p>
+        We celebrate the potential within each person
+        to transform challenges into opportunities
+        and contribute to a brighter world.
+      </p>
+    </div>
+  </section>
+
+  <section class="cream" id="meaning">
+    <div class="container">
+      <div class="section-label">The meaning behind our name</div>
+      <h2>What Does Radiance Mean?</h2>
+      <p>
+        Radiance is the light that emerges when
+        inner wisdom, courage, and compassion are expressed
+        through our daily actions.
+      </p>
+      <p>
+        Inspired by the Lotus Sutra's teaching of the
+        potential for Buddhahood in all people,
+        Radiance symbolizes the possibility of awakening
+        our highest qualities, even during difficult times.
+      </p>
+      <div class="cards">
+        <article class="card">
+          <h3>Wisdom</h3>
+          <p>Discovering clarity, understanding, and hope
+             in everyday life.</p>
+        </article>
+        <article class="card">
+          <h3>Courage</h3>
+          <p>Facing challenges with determination and
+             transforming obstacles into growth.</p>
+        </article>
+        <article class="card">
+          <h3>Compassion</h3>
+          <p>Respecting the dignity of life and encouraging
+             happiness in ourselves and others.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="dark" id="philosophy">
+    <div class="container">
+      <div class="section-label">Our inspiration</div>
+      <h2>The Lotus Sutra and Human Potential</h2>
+      <p>
+        The Lotus Sutra emphasizes the profound potential
+        of every person to attain Buddhahood.
+      </p>
+      <p>
+        Nichiren Buddhism encourages individuals to
+        bring forth their inner strength, develop
+        wisdom and compassion, and create value
+        amid life's challenges.
+      </p>
+      <p>
+        Radiance shares reflections inspired by these
+        teachings, inviting thoughtful study, dialogue,
+        and positive action.
+      </p>
+      <div class="quote">
+        The light of one awakened life can become
+        a source of hope for many others.
+      </div>
+    </div>
+  </section>
+
+  <section class="cream" id="inspiration">
+    <div class="container">
+      <div class="section-label">Daily encouragement</div>
+      <h2>Ideas to Illuminate Your Journey</h2>
+      <div class="cards">
+        <article class="card">
+          <h3>Finding Hope</h3>
+          <p>
+            Even in uncertainty, each new day offers
+            opportunities to renew our determination.
+          </p>
+        </article>
+        <article class="card">
+          <h3>Living with Purpose</h3>
+          <p>
+            Small actions guided by courage and compassion
+            can make a meaningful difference.
+          </p>
+        </article>
+        <article class="card">
+          <h3>Growing Together</h3>
+          <p>
+            Encouragement, dialogue, and mutual respect
+            help build stronger human connections.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="closing" id="community">
+    <div class="container">
+      <div class="section-label">Our shared journey</div>
+      <h2>Brighter Lives, Brighter World</h2>
+      <p>
+        Radiance is beginning its journey as a space
+        for inspiration, learning, and encouragement.
+      </p>
+      <p>
+        Future updates will introduce reflections,
+        educational resources, and opportunities
+        for meaningful community connection.
+      </p>
+      <a class="button" href="#home">Return to the Light</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <strong>RADIANCE</strong>
+  <p>Awakening Brighter Lives</p>
+  <p>radianceway.org</p>
+  <p>&copy; <span id="year">2026</span> Radiance.
+     All rights reserved.</p>
+</footer>
+
+<script>
+  document.getElementById("year").textContent =
+    new Date().getFullYear();
+</script>
+
+</body>
+</html>
