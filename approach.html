@@ -1,0 +1,129 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Learn how RadianceWay Cybersecurity approaches practical security risk assessment, prevention, and monitoring for small businesses.">
+  <title>Security Approach | RadianceWay Cybersecurity</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-container">
+    <a href="index.html" aria-label="RadianceWay Cybersecurity Home">
+      <img class="brand-logo"
+           src="Copper-Gold%20RWC%20Cybersecurity%20Logo.png"
+           alt="RWC RadianceWay Cybersecurity">
+    </a>
+
+    <button class="menu-toggle" type="button"
+            aria-label="Toggle navigation menu"
+            aria-controls="main-nav"
+            aria-expanded="false">
+      ☰ Menu
+    </button>
+
+    <nav class="main-nav" id="main-nav" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="mission.html">Our Mission</a>
+      <a href="approach.html" aria-current="page">Security Approach</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main class="page-content">
+  <section class="approach-section">
+    <div class="page-container">
+
+      <p class="section-label">HOW WE THINK ABOUT SECURITY</p>
+      <h1>Our Security Approach</h1>
+
+      <p>
+        Effective cybersecurity is not just about installing
+        technology. It begins with understanding how a
+        business operates, identifying its risks, and
+        choosing practical steps to improve protection.
+      </p>
+
+      <h2>1. Understand the Environment</h2>
+      <p>
+        Every business has different technology, workflows,
+        and security concerns. We begin by understanding
+        the systems, devices, networks, and information
+        that are important to daily operations.
+      </p>
+
+      <h2>2. Identify Potential Risks</h2>
+      <p>
+        We look for opportunities to strengthen security,
+        including account protection, network configuration,
+        software updates, email security, and access controls.
+      </p>
+
+      <h2>3. Prioritize Practical Improvements</h2>
+      <p>
+        Not every security concern requires an expensive
+        solution. We focus on clear recommendations that
+        consider business needs, available resources,
+        and the potential impact of different risks.
+      </p>
+
+      <h2>4. Improve Visibility</h2>
+      <p>
+        Security monitoring and log reviews can help reveal
+        suspicious activity, configuration problems, and
+        events that deserve further investigation.
+        Visibility supports better-informed decisions.
+      </p>
+
+      <h2>5. Encourage Continuous Improvement</h2>
+      <p>
+        Cybersecurity is an ongoing process. Regular reviews,
+        security awareness, and updated practices help
+        businesses adapt as technology and threats evolve.
+      </p>
+
+      <h2>Built on Practical Experience</h2>
+      <p>
+        Our approach is informed by hands-on cybersecurity
+        lab work involving network firewalls, Windows and
+        Linux systems, security monitoring, and log analysis.
+        We emphasize clear communication, careful assessment,
+        and recommendations grounded in observed findings.
+      </p>
+
+      <a class="page-button" href="services.html">
+        Explore Our Services
+      </a>
+
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p><strong>RADIANCEWAY CYBERSECURITY</strong></p>
+  <p>Clarity. Protection. Confidence.</p>
+  <p>Founded by Laxmikant Sharma</p>
+  <p>&copy; <span id="year">2026</span> RadianceWay Cybersecurity.</p>
+</footer>
+
+<script>
+  document.getElementById("year").textContent =
+    new Date().getFullYear();
+
+  const menuButton = document.querySelector(".menu-toggle");
+  const mainNav = document.getElementById("main-nav");
+
+  menuButton.addEventListener("click", () => {
+    const isOpen = mainNav.classList.toggle("open");
+    menuButton.setAttribute("aria-expanded", String(isOpen));
+  });
+</script>
+
+</body>
+</html>
