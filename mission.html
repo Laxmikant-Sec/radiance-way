@@ -1,0 +1,115 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Discover the mission and values behind RadianceWay Cybersecurity.">
+  <title>Our Mission | RadianceWay Cybersecurity</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-container">
+    <a href="index.html" aria-label="RadianceWay Cybersecurity Home">
+      <img class="brand-logo"
+           src="Copper-Gold%20RWC%20Cybersecurity%20Logo.png"
+           alt="RWC RadianceWay Cybersecurity">
+    </a>
+
+    <button class="menu-toggle" type="button"
+            aria-label="Toggle navigation menu"
+            aria-controls="main-nav"
+            aria-expanded="false">
+      ☰ Menu
+    </button>
+
+    <nav class="main-nav" id="main-nav" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="mission.html" aria-current="page">Our Mission</a>
+      <a href="approach.html">Security Approach</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main class="page-content">
+  <section class="mission-section">
+    <div class="page-container">
+
+      <p class="section-label">OUR PURPOSE</p>
+      <h1>Our Mission</h1>
+
+      <p>
+        Our mission is to make cybersecurity more approachable,
+        practical, and accessible for small businesses.
+      </p>
+
+      <p>
+        We believe every business deserves the confidence to
+        operate in a connected world, regardless of its size
+        or technical resources.
+      </p>
+
+      <h2>What Guides Us</h2>
+
+      <p>
+        <strong>Clarity.</strong> We believe cybersecurity should
+        be explained in language people can understand,
+        without unnecessary technical complexity.
+      </p>
+
+      <p>
+        <strong>Protection.</strong> We focus on identifying
+        security weaknesses, reducing preventable risks,
+        and supporting stronger everyday security practices.
+      </p>
+
+      <p>
+        <strong>Confidence.</strong> We aim to help business owners
+        make informed decisions about protecting their systems,
+        information, and operations.
+      </p>
+
+      <h2>Our Vision</h2>
+
+      <p>
+        To help build a community where small businesses
+        understand cybersecurity risks and have access
+        to practical guidance for protecting their
+        digital environments.
+      </p>
+
+      <a class="page-button" href="approach.html">
+        Discover Our Security Approach
+      </a>
+
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p><strong>RADIANCEWAY CYBERSECURITY</strong></p>
+  <p>Clarity. Protection. Confidence.</p>
+  <p>Founded by Laxmikant Sharma</p>
+  <p>&copy; <span id="year">2026</span> RadianceWay Cybersecurity.</p>
+</footer>
+
+<script>
+  document.getElementById("year").textContent =
+    new Date().getFullYear();
+
+  const menuButton = document.querySelector(".menu-toggle");
+  const mainNav = document.getElementById("main-nav");
+
+  menuButton.addEventListener("click", () => {
+    const isOpen = mainNav.classList.toggle("open");
+    menuButton.setAttribute("aria-expanded", String(isOpen));
+  });
+</script>
+
+</body>
+</html>
