@@ -1,0 +1,117 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Contact RadianceWay Cybersecurity in Winnipeg, Manitoba, for practical cybersecurity guidance and security reviews.">
+  <title>Contact Us | RadianceWay Cybersecurity</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-container">
+    <a href="index.html" aria-label="RadianceWay Cybersecurity Home">
+      <img class="brand-logo"
+           src="Copper-Gold%20RWC%20Cybersecurity%20Logo.png"
+           alt="RWC RadianceWay Cybersecurity">
+    </a>
+
+    <button class="menu-toggle" type="button"
+            aria-label="Toggle navigation menu"
+            aria-controls="main-nav"
+            aria-expanded="false">
+      ☰ Menu
+    </button>
+
+    <nav class="main-nav" id="main-nav" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="mission.html">Our Mission</a>
+      <a href="approach.html">Security Approach</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html" aria-current="page">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main class="page-content">
+  <section class="contact-section">
+    <div class="page-container">
+
+      <p class="section-label">LET'S CONNECT</p>
+      <h1>Contact RadianceWay Cybersecurity</h1>
+
+      <p>
+        Have questions about protecting your business,
+        improving network security, or understanding
+        cybersecurity risks?
+      </p>
+
+      <p>
+        RadianceWay Cybersecurity welcomes conversations
+        with small business owners who want practical,
+        understandable security guidance.
+      </p>
+
+      <h2>Get in Touch</h2>
+
+      <p>
+        <strong>Location:</strong><br>
+        Winnipeg, Manitoba, Canada
+      </p>
+
+      <p>
+        <strong>Website:</strong><br>
+        <a href="https://radianceway.org">
+          radianceway.org
+        </a>
+      </p>
+
+      <h2>How We Can Help</h2>
+
+      <p>
+        Whether you are concerned about phishing,
+        network security, system configurations,
+        or suspicious activity, an initial conversation
+        can help clarify your needs and possible
+        next steps.
+      </p>
+
+      <p>
+        Please avoid sending passwords, confidential
+        company records, or other sensitive information
+        in an initial inquiry.
+      </p>
+
+      <a class="page-button" href="services.html">
+        Explore Our Services
+      </a>
+
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p><strong>RADIANCEWAY CYBERSECURITY</strong></p>
+  <p>Clarity. Protection. Confidence.</p>
+  <p>Founded by Laxmikant Sharma</p>
+  <p>&copy; <span id="year">2026</span> RadianceWay Cybersecurity.</p>
+</footer>
+
+<script>
+  document.getElementById("year").textContent =
+    new Date().getFullYear();
+
+  const menuButton = document.querySelector(".menu-toggle");
+  const mainNav = document.getElementById("main-nav");
+
+  menuButton.addEventListener("click", () => {
+    const isOpen = mainNav.classList.toggle("open");
+    menuButton.setAttribute("aria-expanded", String(isOpen));
+  });
+</script>
+
+</body>
+</html>
