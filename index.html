@@ -35,6 +35,35 @@
   font-size: 12px;
 }
 }
+  @media (max-width: 600px) {
+  .menu-toggle {
+    display: block;
+    margin: 8px auto;
+  }
+
+  .header nav {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    padding: 16px 0;
+  }
+
+  .header nav.open {
+    display: flex;
+  }
+}  
+ .menu-toggle {
+  display: none;
+  background: transparent;
+  color: #d6a94f;
+  border: 1px solid #d6a94f;
+  border-radius: 8px;
+  padding: 10px 16px;
+  font: inherit;
+  cursor: pointer;
+}
     :root {
       --navy: #102c40;
       --deep: #091b2a;
@@ -234,7 +263,13 @@
 
 <header class="header">
   <a class="brand" href="#home">RADIANCEWAY CYBERSECURITY</a>
-  <nav aria-label="Main navigation">
+  <button class="menu-toggle" type="button"
+        aria-label="Toggle navigation menu"
+        aria-controls="main-nav"
+        aria-expanded="false">
+  ☰ Menu
+</button>
+  <nav id="main-nav" aria-label="Main navigation">
     <a href="#about">About</a>
     <a href="#meaning">Our Mission</a>
     <a href="#philosophy">Security Approach</a>
@@ -410,9 +445,10 @@
         on protecting their networks, systems, and data.
       </p>
       <p>
-        Future updates will introduce reflections,
-        educational resources, and opportunities
-        for meaningful community connection.
+        Whether you have questions about network security,
+        email protection, or cybersecurity assessments,
+        we welcome the opportunity to discuss your
+        business security needs.
       </p>
       <a class="button" href="mailto:laxsharma@lscyber.ca?subject=RadianceWay%20Cybersecurity%20Inquiry">Contact Us</a>
     </div>
@@ -428,10 +464,27 @@
      All rights reserved.</p>
 </footer>
 
+
 <script>
   document.getElementById("year").textContent =
     new Date().getFullYear();
+
+  const menuButton = document.querySelector(".menu-toggle");
+  const mainNav = document.getElementById("main-nav");
+
+  menuButton.addEventListener("click", () => {
+    const isOpen = mainNav.classList.toggle("open");
+    menuButton.setAttribute("aria-expanded", String(isOpen));
+  });
+
+  mainNav.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => {
+      mainNav.classList.remove("open");
+      menuButton.setAttribute("aria-expanded", "false");
+    });
+  });
 </script>
+  
 
 </body>
 </html>
