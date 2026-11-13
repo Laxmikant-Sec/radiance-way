@@ -196,6 +196,21 @@ body .hero {
   background: linear-gradient(110deg, #03111f, #06182b);
 }
 
+body .hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background: linear-gradient(
+    90deg,
+    #03111f 0%,
+    rgba(3, 17, 31, 0.95) 28%,
+    rgba(3, 17, 31, 0.55) 48%,
+    transparent 70%
+  );
+}
+
 body .hero img.hero-image {
   position: absolute;
   z-index: -1;
