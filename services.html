@@ -1,0 +1,137 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Explore practical cybersecurity services from RadianceWay Cybersecurity, including security health checks, phishing awareness, network reviews, and log reviews.">
+  <title>Our Services | RadianceWay Cybersecurity</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-container">
+    <a href="index.html" aria-label="RadianceWay Cybersecurity Home">
+      <img class="brand-logo"
+           src="Copper-Gold%20RWC%20Cybersecurity%20Logo.png"
+           alt="RWC RadianceWay Cybersecurity">
+    </a>
+
+    <button class="menu-toggle" type="button"
+            aria-label="Toggle navigation menu"
+            aria-controls="main-nav"
+            aria-expanded="false">
+      ☰ Menu
+    </button>
+
+    <nav class="main-nav" id="main-nav" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="mission.html">Our Mission</a>
+      <a href="approach.html">Security Approach</a>
+      <a href="services.html" aria-current="page">Services</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main class="page-content">
+  <section class="services-section">
+    <div class="page-container">
+
+      <p class="section-label">PRACTICAL CYBERSECURITY SUPPORT</p>
+      <h1>Our Cybersecurity Services</h1>
+
+      <p>
+        Every business faces different cybersecurity challenges.
+        RadianceWay Cybersecurity focuses on practical security
+        reviews, awareness, and recommendations to help small
+        businesses understand and reduce their digital risks.
+      </p>
+
+      <h2>01. Cybersecurity Health Checks</h2>
+      <p>
+        A structured review of common cybersecurity practices,
+        including account security, software updates, device
+        protection, and basic access controls.
+      </p>
+      <p>
+        The goal is to identify potential weaknesses and provide
+        clear, prioritized recommendations for improvement.
+      </p>
+
+      <h2>02. Email Security &amp; Phishing Awareness</h2>
+      <p>
+        Email remains a common entry point for cyber threats.
+        We focus on recognizing suspicious messages,
+        understanding phishing techniques, and reviewing
+        practical email protection measures.
+      </p>
+      <p>
+        Recommendations may include multi-factor authentication,
+        account protection practices, and employee awareness.
+      </p>
+
+      <h2>03. Network Security Reviews</h2>
+      <p>
+        A practical examination of network security fundamentals,
+        including firewall configurations, wireless security,
+        network segmentation, and device exposure.
+      </p>
+      <p>
+        The objective is to identify areas where network
+        protection can be strengthened and unnecessary
+        risks can be reduced.
+      </p>
+
+      <h2>04. Security Monitoring &amp; Log Reviews</h2>
+      <p>
+        Security logs can provide valuable information about
+        authentication attempts, system activity, and
+        potentially suspicious events.
+      </p>
+      <p>
+        We focus on reviewing available logs, identifying
+        events that may require attention, and explaining
+        findings in understandable terms.
+      </p>
+
+      <h2>Start with a Conversation</h2>
+      <p>
+        Not every business needs the same level of cybersecurity
+        support. An initial discussion can help clarify your
+        concerns and determine which type of review or guidance
+        may be appropriate.
+      </p>
+
+      <a class="page-button" href="contact.html">
+        Contact RadianceWay Cybersecurity
+      </a>
+
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p><strong>RADIANCEWAY CYBERSECURITY</strong></p>
+  <p>Clarity. Protection. Confidence.</p>
+  <p>Founded by Laxmikant Sharma</p>
+  <p>&copy; <span id="year">2026</span> RadianceWay Cybersecurity.</p>
+</footer>
+
+<script>
+  document.getElementById("year").textContent =
+    new Date().getFullYear();
+
+  const menuButton = document.querySelector(".menu-toggle");
+  const mainNav = document.getElementById("main-nav");
+
+  menuButton.addEventListener("click", () => {
+    const isOpen = mainNav.classList.toggle("open");
+    menuButton.setAttribute("aria-expanded", String(isOpen));
+  });
+</script>
+
+</body>
+</html>
