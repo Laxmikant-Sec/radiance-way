@@ -103,3 +103,79 @@ body {
     display: flex;
   }
 }
+
+/* Shared Inner Page Styling */
+
+.page-content {
+  min-height: 70vh;
+  background: linear-gradient(135deg, #06182b, #0d304e);
+  padding: 80px 24px;
+}
+
+.page-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.section-label {
+  color: var(--soft-copper);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 18px;
+}
+
+.page-container h1 {
+  font-size: clamp(32px, 5vw, 48px);
+  line-height: 1.2;
+  margin: 0 0 30px;
+  color: var(--white);
+}
+
+.page-container p {
+  color: var(--muted-text);
+  font-size: 18px;
+  line-height: 1.8;
+  margin-bottom: 24px;
+}
+
+.page-button {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 14px 26px;
+  border: 1px solid var(--soft-copper);
+  border-radius: 8px;
+  color: var(--white);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.page-button:hover {
+  background: var(--soft-copper);
+  color: var(--navy-dark);
+}
+
+.site-footer {
+  background: var(--navy-dark);
+  border-top: 1px solid rgba(217, 150, 114, 0.3);
+  padding: 35px 20px;
+  text-align: center;
+  color: var(--muted-text);
+  font-size: 14px;
+}
+
+.site-footer p {
+  margin: 8px 0;
+}
+
+@media (max-width: 768px) {
+  .page-content {
+    padding: 55px 20px;
+  }
+
+  .page-container p {
+    font-size: 16px;
+    line-height: 1.7;
+  }
+}
