@@ -222,6 +222,9 @@ body .hero img.hero-image {
   height: 100%;
   object-fit: cover;
   object-position: center;
+-webkit-mask-image: linear-gradient(to right, transparent 0%, black 35%);
+mask-image: linear-gradient(to right, transparent 0%, black 35%);
+
   transform: translateY(-50%);
   border: none;
   border-radius: 0;
