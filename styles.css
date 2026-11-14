@@ -386,3 +386,22 @@ body .service-highlights {
 .contact-section a:not(.page-button):focus-visible {
   color: var(--white);
 }
+
+/* Homepage - Consistent Mobile Header */
+
+@media (max-width: 768px) {
+  body .header {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+  }
+
+  body .header .brand {
+    margin: 0 auto;
+  }
+
+  body .header .menu-toggle {
+    margin: 0 auto;
+  }
+}
