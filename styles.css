@@ -1,0 +1,426 @@
+
+/* RadianceWay Cybersecurity - Website Theme */
+
+:root {
+  --navy: #06182b;
+  --navy-dark: #03111f;
+  --navy-light: #0d304e;
+  --electric-blue: #18baf0;
+  --soft-copper: #d99672;
+  --copper-light: #f0bea0;
+  --white: #f7f9fc;
+  --muted-text: #c0d0df;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: var(--navy);
+  color: var(--white);
+}
+
+/* Shared Header and Navigation */
+
+.site-header {
+  background: var(--navy-dark);
+  border-bottom: 1px solid rgba(217, 150, 114, 0.45);
+  padding: 12px 5%;
+}
+
+.header-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.brand-logo {
+  display: block;
+  width: 260px;
+  max-width: 100%;
+  height: auto;
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.main-nav a {
+  color: var(--white);
+  text-decoration: none;
+  font-size: 15px;
+}
+
+.main-nav a:hover,
+.main-nav a:focus-visible {
+  color: var(--copper-light);
+}
+
+/* Mobile Navigation */
+
+.menu-toggle {
+  display: none;
+  background: transparent;
+  color: var(--copper-light);
+  border: 1px solid var(--soft-copper);
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .brand-logo {
+    width: 220px;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .main-nav {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    gap: 18px;
+    padding: 15px 0;
+  }
+
+  .main-nav.open {
+    display: flex;
+  }
+}
+
+/* Shared Inner Page Styling */
+
+.page-content {
+  min-height: 70vh;
+  background: linear-gradient(135deg, #06182b, #0d304e);
+  padding: 80px 24px;
+}
+
+.page-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.section-label {
+  color: var(--soft-copper);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 18px;
+}
+
+.page-container h1 {
+  font-size: clamp(32px, 5vw, 48px);
+  line-height: 1.2;
+  margin: 0 0 30px;
+  color: var(--white);
+}
+
+.page-container p {
+  color: var(--muted-text);
+  font-size: 18px;
+  line-height: 1.8;
+  margin-bottom: 24px;
+}
+
+.page-button {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 14px 26px;
+  border: 1px solid var(--soft-copper);
+  border-radius: 8px;
+  color: var(--white);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.page-button:hover {
+  background: var(--soft-copper);
+  color: var(--navy-dark);
+}
+
+.site-footer {
+  background: var(--navy-dark);
+  border-top: 1px solid rgba(217, 150, 114, 0.3);
+  padding: 35px 20px;
+  text-align: center;
+  color: var(--muted-text);
+  font-size: 14px;
+}
+
+.site-footer p {
+  margin: 8px 0;
+}
+
+@media (max-width: 768px) {
+  .page-content {
+    padding: 55px 20px;
+  }
+
+  .page-container p {
+    font-size: 16px;
+    line-height: 1.7;
+  }
+}
+
+/* RWC Homepage Hero Redesign */
+
+body .hero {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: left;
+  min-height: 620px;
+  padding: 90px max(5%, calc((100% - 1400px) / 2));
+  overflow: hidden;
+  isolation: isolate;
+  background: linear-gradient(110deg, #03111f, #06182b);
+}
+
+body .hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background: linear-gradient(
+    90deg,
+    #03111f 0%,
+    rgba(3, 17, 31, 0.95) 28%,
+    rgba(3, 17, 31, 0.55) 48%,
+    transparent 70%
+  );
+}
+
+body .hero img.hero-image {
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  right: 0;
+  left: auto;
+  width: 59%;
+  max-width: none;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+-webkit-mask-image: linear-gradient(to right, transparent 0%, black 35%);
+mask-image: linear-gradient(to right, transparent 0%, black 35%);
+
+  transform: translateY(-50%);
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+body .hero .hero-title {
+  position: relative;
+  max-width: 520px;
+  margin: 0 0 25px;
+  color: #ffffff;
+  font-size: clamp(34px, 3.5vw, 52px);
+  line-height: 1.12;
+  font-weight: 700;
+  letter-spacing: -1.5px;
+}
+
+body .hero .hero-text {
+  position: relative;
+  max-width: 520px;
+  margin: 0 0 32px;
+  color: #c0d0df;
+  font-size: 19px;
+  line-height: 1.7;
+}
+
+body .hero a.button {
+  position: relative;
+  display: inline-block;
+  padding: 16px 30px;
+  background: #d99672;
+  color: #06182b;
+  border: 1px solid #d99672;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+body .hero a.button:hover {
+  background: #f0bea0;
+  border-color: #f0bea0;
+}
+
+/* Homepage Hero - Mobile Layout */
+
+@media (max-width: 768px) {
+  body .hero {
+    min-height: 690px;
+    justify-content: flex-start;
+    padding: 55px 24px 300px;
+  }
+
+  body .hero img.hero-image {
+    top: auto;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 320px;
+    transform: none;
+    object-fit: cover;
+  }
+
+  body .hero .hero-title {
+    font-size: clamp(32px, 8vw, 46px);
+    letter-spacing: -0.5px;
+  }
+
+  body .hero .hero-text {
+    font-size: 16px;
+  }
+}
+
+/* Homepage - Four Cybersecurity Service Highlights */
+
+body .service-highlights {
+  background: var(--navy-dark);
+  border-top: 1px solid rgba(217, 150, 114, 0.2);
+  border-bottom: 1px solid rgba(217, 150, 114, 0.2);
+  padding: 36px 5%;
+}
+
+.service-highlights-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.service-highlight {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 14px;
+  padding: 20px 14px;
+  text-align: center;
+  text-decoration: none;
+  color: var(--white);
+  border-radius: 10px;
+  transition: background 0.2s ease;
+}
+
+.service-highlight:hover,
+.service-highlight:focus-visible {
+  background: rgba(217, 150, 114, 0.1);
+}
+
+.service-icon {
+  color: var(--soft-copper);
+  font-size: 42px;
+  line-height: 1;
+}
+
+.service-highlight h2 {
+  margin: 0;
+  font-size: 18px;
+  font-family: Arial, sans-serif;
+  font-weight: 600;
+  line-height: 1.5;
+  color: var(--white);
+}
+
+/* Tablet Layout */
+
+@media (max-width: 900px) {
+  .service-highlights-container {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* Mobile Layout */
+
+@media (max-width: 480px) {
+  .service-highlights-container {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  body .service-highlights {
+    padding: 24px 16px;
+  }
+
+  .service-highlight {
+    padding: 16px 12px;
+  }
+}
+
+/* Contact Page - Link Colors */
+
+.contact-section a:not(.page-button) {
+  color: var(--copper-light);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.contact-section a:not(.page-button):hover,
+.contact-section a:not(.page-button):focus-visible {
+  color: var(--white);
+}
+
+/* Homepage - Consistent Mobile Header */
+
+@media (max-width: 768px) {
+  body .header {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+  }
+
+  body .header .brand {
+    margin: 0 auto;
+  }
+
+  body .header .menu-toggle {
+    margin: 0 auto;
+  }
+}
+
+/* Shared Footer - RadianceWay Cybersecurity */
+
+.site-footer {
+  background: #071521;
+  color: #bfced5;
+  padding: 32px 18px;
+  text-align: center;
+  font-size: 13px;
+}
+
+.site-footer strong {
+  color: #d99672;
+  font-weight: 700;
+}
+
+.site-footer p {
+  margin: 12px 0;
+}
