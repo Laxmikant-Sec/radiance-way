@@ -405,3 +405,22 @@ body .service-highlights {
     margin: 0 auto;
   }
 }
+
+/* Shared Footer - RadianceWay Cybersecurity */
+
+.site-footer {
+  background: #071521;
+  color: #bfced5;
+  padding: 32px 18px;
+  text-align: center;
+  font-size: 13px;
+}
+
+.site-footer strong {
+  color: #d99672;
+  font-weight: 700;
+}
+
+.site-footer p {
+  margin: 12px 0;
+}
