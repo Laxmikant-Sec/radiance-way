@@ -297,3 +297,78 @@ body .hero a.button:hover {
     font-size: 16px;
   }
 }
+
+/* Homepage - Four Cybersecurity Service Highlights */
+
+body .service-highlights {
+  background: var(--navy-dark);
+  border-top: 1px solid rgba(217, 150, 114, 0.2);
+  border-bottom: 1px solid rgba(217, 150, 114, 0.2);
+  padding: 36px 5%;
+}
+
+.service-highlights-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.service-highlight {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 14px;
+  padding: 20px 14px;
+  text-align: center;
+  text-decoration: none;
+  color: var(--white);
+  border-radius: 10px;
+  transition: background 0.2s ease;
+}
+
+.service-highlight:hover,
+.service-highlight:focus-visible {
+  background: rgba(217, 150, 114, 0.1);
+}
+
+.service-icon {
+  color: var(--soft-copper);
+  font-size: 36px;
+  line-height: 1;
+}
+
+.service-highlight h2 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.5;
+  color: var(--white);
+}
+
+/* Tablet Layout */
+
+@media (max-width: 900px) {
+  .service-highlights-container {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* Mobile Layout */
+
+@media (max-width: 480px) {
+  .service-highlights-container {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  body .service-highlights {
+    padding: 24px 16px;
+  }
+
+  .service-highlight {
+    padding: 16px 12px;
+  }
+}
