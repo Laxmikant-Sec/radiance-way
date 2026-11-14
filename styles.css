@@ -373,3 +373,16 @@ body .service-highlights {
     padding: 16px 12px;
   }
 }
+
+/* Contact Page - Link Colors */
+
+.contact-section a:not(.page-button) {
+  color: var(--copper-light);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.contact-section a:not(.page-button):hover,
+.contact-section a:not(.page-button):focus-visible {
+  color: var(--white);
+}
